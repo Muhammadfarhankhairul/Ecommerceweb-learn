@@ -1,0 +1,10 @@
+@import "tailwindcss";
+* {
+  box-sizing: border-box;
+}
+
+.bg {
+  background: url("./assets/image/hero.jpg");
+  background-size: cover;
+  height: 70vh;
+}
