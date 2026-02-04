@@ -13,7 +13,13 @@ export default function ProductCard({ product }) {
             {product.description.substring(0, 70) + "..."}
           </p>
           <div className="flex justify-between mt-4 items-center">
-            <p className="text-xl font-semibold">Rp. {product.price}</p>
+            <p className="text-xl font-semibold">
+              {new Intl.NumberFormat("id-ID", {
+                style: "currency",
+                currency: "IDR",
+                minimumFractionDigits: 0,
+              }).format(product.price)}
+            </p>
             <p className="bg-black text-white p-2 m-3 rounded-full">
               View details
             </p>

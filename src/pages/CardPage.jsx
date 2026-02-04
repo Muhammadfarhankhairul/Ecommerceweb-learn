@@ -50,7 +50,14 @@ export default function CardPage() {
                   <Link className="font-semibold " to={`/product/${item.id}`}>
                     {item.title}
                   </Link>
-                  <p>Rp. {item.price}</p>
+                  <p>
+                    {" "}
+                    {new Intl.NumberFormat("id-ID", {
+                      style: "currency",
+                      currency: "IDR",
+                      minimumFractionDigits: 0,
+                    }).format(item.price)}
+                  </p>
                   <div className="flex items-center gap-2 mt-3">
                     <button
                       className="bg-black rounded-full p-1 hover:cursor-pointer"
@@ -86,7 +93,11 @@ export default function CardPage() {
                 </div>
                 <div className="text-right">
                   <p className="text-semibold">
-                    Rp. {item.price * item.quantity}
+                    {new Intl.NumberFormat("id-ID", {
+                      style: "currency",
+                      currency: "IDR",
+                      minimumFractionDigits: 0,
+                    }).format(item.price * item.quantity)}
                   </p>
                 </div>
               </div>
@@ -98,7 +109,14 @@ export default function CardPage() {
               <div className="space-y-2 mb-4">
                 <div className="flex justify-between">
                   <span>Sub Total</span>
-                  <span>{total}</span>
+                  <span>
+                    {" "}
+                    {new Intl.NumberFormat("id-ID", {
+                      style: "currency",
+                      currency: "IDR",
+                      minimumFractionDigits: 0,
+                    }).format(total)}
+                  </span>
                 </div>
                 <div className="flex justify-between">
                   <span>Shipping</span>
@@ -106,7 +124,14 @@ export default function CardPage() {
                 </div>
                 <div className="flex pt-2 font-bold border-t-2 justify-between">
                   <span>Total</span>
-                  <span>{total}</span>
+                  <span>
+                    {" "}
+                    {new Intl.NumberFormat("id-ID", {
+                      style: "currency",
+                      currency: "IDR",
+                      minimumFractionDigits: 0,
+                    }).format(total)}
+                  </span>
                 </div>
               </div>
               <button className="bg-black text-white w-60 place-self-center flex justify-center px-5 py-2 hover:cursor-pointer hover:bg-gray-900">

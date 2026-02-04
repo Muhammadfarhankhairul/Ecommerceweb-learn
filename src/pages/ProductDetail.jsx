@@ -45,7 +45,11 @@ const ProductDetail = () => {
             <p className="mb-5">{products.description}</p>
             <div className="mb-4">
               <span className="text-2xl font-semibold">
-                Rp. {products.price}
+                {new Intl.NumberFormat("id-ID", {
+                  style: "currency",
+                  currency: "IDR",
+                  minimumFractionDigits: 0,
+                }).format(products.price)}
               </span>
             </div>
             <div className="mb-4">
