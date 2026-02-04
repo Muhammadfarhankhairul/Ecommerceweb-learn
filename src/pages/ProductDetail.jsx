@@ -33,7 +33,7 @@ const ProductDetail = () => {
           Back
         </Link>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-center">
-          <div className="shadow-lg p-4 rounded w-[400px] ">
+          <div className="shadow-lg p-4 rounded w-[400vh]">
             <img
               className="place-self-center"
               src={products.image}
